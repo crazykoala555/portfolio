@@ -1,0 +1,9 @@
+#titleAreaPersonas{
+    background-image: url("personas-background-blurred.jpg");
+    height: 80vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+
+}
