@@ -45,7 +45,7 @@ function ContentArea () {
                        color: "white"
                    }}>
             <Grow in={introVisible} timeout={500}>
-                <div id="intro" ref={introRef}>
+            <div id="intro" ref={introRef}>
                     <Typography
                         variant="h4"
                         component="div"
@@ -87,12 +87,12 @@ function ContentArea () {
                             <Button onClick={() => {window.open("https://students.brown.edu/Tae_Kwon_Do/")}} size="large" sx={{ color: '#fff', background: "#156cc0", '&:hover' :  {background: "#fff", color: "#000"}, m:1}}>Visit the Page</Button>
                         </div>
                     </Typography>
-                    <div style={{textAlign: "center"}} onClick={() => setSketchLB(true)}>
-                        <img id="oldSiteImage" src={require('../Images/btkd-capture.jpeg')}
-                             alt="Old and Outdated Website"/>
-                    </div>
-                    <Lightbox isOpen={sketchLB} setOpen={setSketchLB} srcImage={require('../Images/btkd-capture.jpeg')}/>
+                <div style={{textAlign: "center"}} onClick={() => setSketchLB(true)}>
+                    <img id="oldSiteImage" src={require('../Images/btkd-capture.jpeg')}
+                         alt="Old and Outdated Website"/>
                 </div>
+                <Lightbox isOpen={sketchLB} setOpen={setSketchLB} srcImage={require('../Images/btkd-capture.jpeg')}/>
+            </div>
             </Grow>
             <Grow in={analysisVisible} timeout={500}>
                 <div id="analysisSection" ref={analysisRef}>
@@ -173,174 +173,174 @@ function ContentArea () {
                     </Typography>
                 </div>
             </Grow>
-            <div id="mockupSection">
-                <Grow in={mockupIntroRefVisible} timeout={500}>
-                    <div ref={mockupIntroRef} id="mockupIntro">
-                        <Typography
+                <div id="mockupSection">
+                    <Grow in={mockupIntroRefVisible} timeout={500}>
+                        <div ref={mockupIntroRef} id="mockupIntro">
+                            <Typography
                             variant="h2"
                             component="div"
                             sx={{}}
-                        >
-                            <b>Visual Redesign</b>
-                        </Typography>
-                        <Typography
-                            variant="h5"
-                            component="div"
-                            sx={{}}
-                        >
-                            <b>Low-Fidelity Wireframe</b>
-                        </Typography>
-                        <Typography
-                            variant="body1"
-                            component="div"
-                            sx={{p:2}}
-                        >
-                            <p >
-                                Beginning with a low-fidelity wireframe, I turn to Balsamiq. I generated wireframes for 3
-                                different types of devices,
-                                namely desktop browser use, phone use, and vertical tablet use. Since this page is
-                                scrollable, I the right wireframes
-                                for each respective devices is a "scrolled down" version. Note: mobile versions will show
-                                one announcement, but will normally
-                                show 3 (1 used for illustrative purposes).
-                                <br/><br/>
-                                All wireframes more or less share the same improvements. The greatest difference exists
-                                between the scaling
-                                between devices, the content is improved across the board, as the same assets are used.
-                            </p>
-                        </Typography>
-                    </div>
-                </Grow>
+                            >
+                                <b>Visual Redesign</b>
+                            </Typography>
+                            <Typography
+                                variant="h5"
+                                component="div"
+                                sx={{}}
+                            >
+                                <b>Low-Fidelity Wireframe</b>
+                            </Typography>
+                            <Typography
+                                variant="body1"
+                                component="div"
+                                sx={{p:2}}
+                            >
+                                <p >
+                                    Beginning with a low-fidelity wireframe, I turn to Balsamiq. I generated wireframes for 3
+                                    different types of devices,
+                                    namely desktop browser use, phone use, and vertical tablet use. Since this page is
+                                    scrollable, I the right wireframes
+                                    for each respective devices is a "scrolled down" version. Note: mobile versions will show
+                                    one announcement, but will normally
+                                    show 3 (1 used for illustrative purposes).
+                                    <br/><br/>
+                                    All wireframes more or less share the same improvements. The greatest difference exists
+                                    between the scaling
+                                    between devices, the content is improved across the board, as the same assets are used.
+                                </p>
+                            </Typography>
+                        </div>
+                    </Grow>
 
-                <Grow in={lofiGalleryVisible} timeout={1000}>
-                    <div id="lofiGalleries" ref={lofiGalleryRef}>
-                        <div style={{textAlign: "center"}} onClick={() => setPlofiLB(true)}>
-                            <img className="lofiImages" src={require('../Images/lofiWireframes/Phone-annotated.png')}
-                                 alt="Phone wireframe."/>
+                    <Grow in={lofiGalleryVisible} timeout={1000}>
+                        <div id="lofiGalleries" ref={lofiGalleryRef}>
+                            <div style={{textAlign: "center"}} onClick={() => setPlofiLB(true)}>
+                                <img className="lofiImages" src={require('../Images/lofiWireframes/Phone-annotated.png')}
+                                     alt="Phone wireframe."/>
+                            </div>
+                            <Lightbox isOpen={PlofiLB} setOpen={setPlofiLB} srcImage={require('../Images/lofiWireframes/Phone-annotated.png')}/>
+                            <div style={{textAlign: "center"}} onClick={() => setDlofiLB(true)}>
+                                <img className="lofiImages" src={require('../Images/lofiWireframes/Desktop-annotated.png')}
+                                     alt="Desktop wireframe."/>
+                            </div>
+                            <Lightbox isOpen={DlofiLB} setOpen={setDlofiLB} srcImage={require('../Images/lofiWireframes/Desktop-annotated.png')}/>
+                            <div style={{textAlign: "center"}} onClick={() => setTlofiLB(true)}>
+                                <img className="lofiImages" src={require('../Images/lofiWireframes/Tablet-annotated.png')}
+                                     alt="Tablet Wireframe."/>
+                            </div>
+                            <Lightbox isOpen={TlofiLB} setOpen={setTlofiLB} srcImage={require('../Images/lofiWireframes/Tablet-annotated.png')}/>
                         </div>
-                        <Lightbox isOpen={PlofiLB} setOpen={setPlofiLB} srcImage={require('../Images/lofiWireframes/Phone-annotated.png')}/>
-                        <div style={{textAlign: "center"}} onClick={() => setDlofiLB(true)}>
-                            <img className="lofiImages" src={require('../Images/lofiWireframes/Desktop-annotated.png')}
-                                 alt="Desktop wireframe."/>
-                        </div>
-                        <Lightbox isOpen={DlofiLB} setOpen={setDlofiLB} srcImage={require('../Images/lofiWireframes/Desktop-annotated.png')}/>
-                        <div style={{textAlign: "center"}} onClick={() => setTlofiLB(true)}>
-                            <img className="lofiImages" src={require('../Images/lofiWireframes/Tablet-annotated.png')}
-                                 alt="Tablet Wireframe."/>
-                        </div>
-                        <Lightbox isOpen={TlofiLB} setOpen={setTlofiLB} srcImage={require('../Images/lofiWireframes/Tablet-annotated.png')}/>
-                    </div>
-                </Grow>
-                <Grow in={guideVisible} timeout={500}>
-                    <div ref={guideRef}>
-                        <Typography
-                            variant="h5"
-                            component="div"
-                            sx={{pt:2}}
-                        >
-                            <b>Visual Design Guide</b>
-                        </Typography>
-                        <Typography
-                            variant="body1"
-                            component="div"
-                            sx={{p:2}}
-                        >
-                            <p >After finishing the low-fidelity wireframes in Balsamiq, I generated a style
-                                guide for the website. It contains:</p>
-                            <ul>
-                                <li>Buttons, with their respective hover changes.</li>
-                                <li>A color palate, surrounding the red/neutral color aesthetic employed by the original
-                                    website.
-                                </li>
-                                <li>Text sizing and fonts, using the font Sui Generis as well as a sans-serif font.</li>
-                                <li>The icons being used for the site.</li>
-                                <li>The navigation menu/systems being used for the site.</li>
-                            </ul>
-                            <p >It's extremely helpful for keeping a consistent style across all aspects of the site,
-                                creating a more cohesive theme.</p>
-                        </Typography>
-                        <div style={{textAlign: "center"}} onClick={() => setGuideLB(true)}>
-                            <img id="colorStyleGuide" src={require('../Images/hifiPrototypes/styleGuide.png')}
-                                 alt="Style Guide"/>
-                        </div>
-                        <Lightbox isOpen={guideLB} setOpen={setGuideLB} srcImage={require('../Images/hifiPrototypes/styleGuide.png')}/>
+                    </Grow>
+                    <Grow in={guideVisible} timeout={500}>
+                        <div ref={guideRef}>
+                            <Typography
+                                variant="h5"
+                                component="div"
+                                sx={{pt:2}}
+                            >
+                                <b>Visual Design Guide</b>
+                            </Typography>
+                            <Typography
+                                variant="body1"
+                                component="div"
+                                sx={{p:2}}
+                            >
+                                <p >After finishing the low-fidelity wireframes in Balsamiq, I generated a style
+                                    guide for the website. It contains:</p>
+                                <ul>
+                                    <li>Buttons, with their respective hover changes.</li>
+                                    <li>A color palate, surrounding the red/neutral color aesthetic employed by the original
+                                        website.
+                                    </li>
+                                    <li>Text sizing and fonts, using the font Sui Generis as well as a sans-serif font.</li>
+                                    <li>The icons being used for the site.</li>
+                                    <li>The navigation menu/systems being used for the site.</li>
+                                </ul>
+                                <p >It's extremely helpful for keeping a consistent style across all aspects of the site,
+                                    creating a more cohesive theme.</p>
+                            </Typography>
+                            <div style={{textAlign: "center"}} onClick={() => setGuideLB(true)}>
+                                <img id="colorStyleGuide" src={require('../Images/hifiPrototypes/styleGuide.png')}
+                                     alt="Style Guide"/>
+                            </div>
+                            <Lightbox isOpen={guideLB} setOpen={setGuideLB} srcImage={require('../Images/hifiPrototypes/styleGuide.png')}/>
 
-                    </div>
-                </Grow>
-                <Grow in={hifiVisible} timeout={500}>
-                    <div ref={hifiRef}>
-                        <Typography
-                            variant="h5"
-                            component="div"
-                            sx={{pt:2}}
-                        >
-                            <b>High-Fidelity Prototypes</b>
-                        </Typography>
-                        <Typography
-                            variant="body1"
-                            component="div"
-                            sx={{p:2}}
-                        >
-                            <p>
-                                After creating a general idea of what I wanted in the form of wireframes, and then designing
-                                a consistent style guide, I moved to Figma to create a high fidelity prototype. The prototypes
-                                all take the same elements and follow style guidelines. Elements are reshuffled around and resize
-                                as per necessary when different formats are required.
-                            </p>
-                        </Typography>
+                        </div>
+                    </Grow>
+                    <Grow in={hifiVisible} timeout={500}>
+                        <div ref={hifiRef}>
+                            <Typography
+                                variant="h5"
+                                component="div"
+                                sx={{pt:2}}
+                            >
+                                <b>High-Fidelity Prototypes</b>
+                            </Typography>
+                            <Typography
+                                variant="body1"
+                                component="div"
+                                sx={{p:2}}
+                            >
+                                <p>
+                                    After creating a general idea of what I wanted in the form of wireframes, and then designing
+                                    a consistent style guide, I moved to Figma to create a high fidelity prototype. The prototypes
+                                    all take the same elements and follow style guidelines. Elements are reshuffled around and resize
+                                    as per necessary when different formats are required.
+                                </p>
+                            </Typography>
 
-                        <Typography
-                            variant="h5"
-                            component="div"
-                            sx={{pt:2}}
-                        >
-                            <b>Desktop Prototypes</b>
-                        </Typography>
-                        <Slide cssClass="slides" autoplay={false}>
-                            <div className="each-slide">
-                                <img className="slideImageW" src={require("../Images/hifiPrototypes/desktop/1.png")} alt="sample" />
-                                <span></span>
-                            </div>
-                            <div className="each-slide">
-                                <img className="slideImageW" src={require("../Images/hifiPrototypes/desktop/2.png")} alt="sample" />
-                                <span></span>
-                            </div>
-                            <div className="each-slide">
-                                <img className="slideImageW" src={require("../Images/hifiPrototypes/desktop/3.png")} alt="sample" />
-                                <span></span>
-                            </div>
-                        </Slide>
-                    </div>
-                </Grow>
-                <Grow in={hifi2Visible} timeout={500}>
-                    <div ref={hifi2Ref}>
-                        <Typography
-                            variant="h5"
-                            component="div"
-                            sx={{pt:2}}
-                        >
-                            <b>Phone Prototypes</b>
-                        </Typography>
-                        <div style={{textAlign: "center"}}>
-                            <img id="phoneHifi" src={require('../Images/hifiPrototypes/phone/consolidatedPhoneHifi.jpg')}
-                                 alt="Phone Hi fi prototypes"/>
+                            <Typography
+                                variant="h5"
+                                component="div"
+                                sx={{pt:2}}
+                            >
+                                <b>Desktop Prototypes (slideshow)</b>
+                            </Typography>
+                            <Slide cssClass="slides" autoplay={false}>
+                                <div className="each-slide">
+                                    <img className="slideImageW" src={require("../Images/hifiPrototypes/desktop/1.png")} alt="sample" />
+                                    <span></span>
+                                </div>
+                                <div className="each-slide">
+                                    <img className="slideImageW" src={require("../Images/hifiPrototypes/desktop/2.png")} alt="sample" />
+                                    <span></span>
+                                </div>
+                                <div className="each-slide">
+                                    <img className="slideImageW" src={require("../Images/hifiPrototypes/desktop/3.png")} alt="sample" />
+                                    <span></span>
+                                </div>
+                            </Slide>
                         </div>
-                        {/*<Lightbox isOpen={PHifiLB} setOpen={setPHifiLB} srcImage={require('../Images/hifiPrototypes/phone/consolidatedPhoneHifi.jpg')}/>*/}
-                        <Typography
-                            variant="h5"
-                            component="div"
-                            sx={{pt:2}}
-                        >
-                            <b>Tablet Prototypes</b>
-                        </Typography>
-                        <div style={{textAlign: "center"}}>
-                            <img id="tabletHifi" src={require('../Images/hifiPrototypes/tablet/consolidatedTabletHifi.jpg')}
-                                 alt="Tablet Hi fi prototypes"/>
+                    </Grow>
+                    <Grow in={hifi2Visible} timeout={500}>
+                        <div ref={hifi2Ref}>
+                            <Typography
+                                variant="h5"
+                                component="div"
+                                sx={{pt:2}}
+                            >
+                                <b>Phone Prototypes</b>
+                            </Typography>
+                            <div style={{textAlign: "center"}}>
+                                <img id="phoneHifi" src={require('../Images/hifiPrototypes/phone/consolidatedPhoneHifi.jpg')}
+                                     alt="Phone Hi fi prototypes"/>
+                            </div>
+                            {/*<Lightbox isOpen={PHifiLB} setOpen={setPHifiLB} srcImage={require('../Images/hifiPrototypes/phone/consolidatedPhoneHifi.jpg')}/>*/}
+                            <Typography
+                                variant="h5"
+                                component="div"
+                                sx={{pt:2}}
+                            >
+                                <b>Tablet Prototypes</b>
+                            </Typography>
+                            <div style={{textAlign: "center"}}>
+                                <img id="tabletHifi" src={require('../Images/hifiPrototypes/tablet/consolidatedTabletHifi.jpg')}
+                                     alt="Tablet Hi fi prototypes"/>
+                            </div>
+                            {/*<Lightbox isOpen={THifiLB} setOpen={setTHifiLB} srcImage={require('../Images/hifiPrototypes/tablet/consolidatedTabletHifi.jpg')}/>*/}
                         </div>
-                        {/*<Lightbox isOpen={THifiLB} setOpen={setTHifiLB} srcImage={require('../Images/hifiPrototypes/tablet/consolidatedTabletHifi.jpg')}/>*/}
-                    </div>
-                </Grow>
-            </div>
+                    </Grow>
+                </div>
             <Grow in={finalVisible} timeout={500}>
                 <div ref={finalRef}>
                     <Typography
@@ -398,7 +398,7 @@ function ContentArea () {
                     </Typography>
                     <div className="projectNavButtons">
                         <Button onClick={() => {scroll.scrollToTop()}} size="large" sx={{ color: '#fff', background: "#156cc0", '&:hover' :  {background: "#fff", color: "#000"}, m:1}}>Scroll To Top</Button>
-                        <NavLink to={"/1300FinalPortfolio"} style={{textDecoration: 'none'}}>
+                        <NavLink to={"/portfolio"} style={{textDecoration: 'none'}}>
                             <Button size="large" sx={{ color: '#fff', background: "#156cc0", '&:hover' :  {background: "#fff", color: "#000"}, m:1}}>Return Home</Button>
                         </NavLink>
                     </div>
